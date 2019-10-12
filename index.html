@@ -732,13 +732,13 @@ The exact processing rules for these parameters are specified in [[DID-RESOLUTIO
 
       <p class="note">
 Note that there may be additional parameters or options that are not part
-of the DID URL but instead passed to a DID resolver "out of band", i.e.,
+of the DID URL but instead passed to a <a>DID Resolver</a> "out of band", i.e.,
 using a resolution protocol or some other mechanism. Such options could
 for example control caching or the desired format of a resolution result.
 This is similar to HTTP, where caching or result format are expressed as
 HTTP headers rather than as part of an HTTP URL. The important distinction
 is that DID parameters that are part of the DID URL specify what resource
-is being identified, whereas DID resolver options that are not part of the
+is being identified, whereas <a>DID Resolver</a> options that are not part of the
 DID URL control how that resource is dereferenced.
       </p>
     </section>
@@ -1069,7 +1069,7 @@ Example:
       <p class="note">
 DID Method specifications MAY create intermediate representations of
 a DID Document that do not contain the <code>id</code> key, such as
-when a DID Resolver is performing resolution. However, the fully
+when a <a>DID Resolver</a> is performing resolution. However, the fully
 resolved DID Document MUST contain a valid <code>id</code> property.
       </p>
     </section>
@@ -1319,7 +1319,7 @@ using a key's position in a tree.
 
       <p class="note">
 Caching and expiration of the keys in a DID Document is entirely the
-responsibility of DID resolvers and other clients. See Section
+responsibility of <a>DID Resolvers</a> and other clients. See Section
 <a href="#did-resolvers"></a>.
       </p>
     </section>
@@ -2144,7 +2144,7 @@ DID Resolvers
     </h1>
 
     <p>
-A DID Resolver is a software or hardware component with an API for resolving
+A <a>DID Resolver</a> is a software or hardware component with an API for resolving
 <a>DIDs</a> of at least one <a>DID method</a>. It
 executes the corresponding DID method's <a href="#read-verify">Read</a> operation to
 obtain the authoritative DID Document.
@@ -2476,7 +2476,7 @@ Key and Signature Expiration
       <p>
 In a decentralized identifier architecture, there are no centralized
 authorities to enforce key or signature expiration policies.
-Therefore DID resolvers and other client applications SHOULD validate
+Therefore <a>DID Resolvers</a> and other client applications SHOULD validate
 that keys were not expired at the time they were used. Since some use cases
 may have legitimate reasons why already-expired keys can be extended, a key
 expiration SHOULD NOT prevent any further use of the key, and implementations
